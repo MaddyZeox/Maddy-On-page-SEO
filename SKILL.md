@@ -1,11 +1,22 @@
 ---
 name: maddy-on-page-seo
-description: Research, plan, write, and audit SEO content for BizRiskGuide and similar sites using search-intent-first analysis, competitor gap research, current primary-source verification, mandatory information gain, practical differentiation, internal linking, and post-publish GSC feedback. Use when Abdul asks for SEO topic research, article planning/writing, on-page SEO, content audits, competitor-gap analysis, content refreshes, or ready-to-upload articles.
+description: Research, plan, write, and audit SEO content for BizRiskGuide and similar sites using search-intent-first analysis, competitor gap research, current primary-source verification, mandatory information gain, practical differentiation, internal linking, and post-publish GSC feedback. Use when User asks for SEO topic research, article planning/writing, on-page SEO, content audits, competitor-gap analysis, content refreshes, or ready-to-upload articles.
 ---
+
 
 # Maddy On Page SEO Skill
 
 A reusable SEO/content workflow for BizRiskGuide. The purpose is not to produce generic search-engine content. Every publish-ready page must satisfy search intent, be factually current, add useful information beyond common SERP coverage, and give a small-business reader something practical they can act on.
+
+## Execution contract — apply on every invocation
+
+When the user explicitly invokes this skill, load and follow this entire file before researching or drafting. Classify the request as topic research, article creation, audit, refresh, or GSC review. Do not claim the skill ran merely because its name was mentioned: perform the relevant workflow and report evidence. Follow explicit user instructions where they override a default below.
+
+For an article request, deliver a real `.md` file by default, with SEO settings outside the publishable article body, working contextual links, and a separate QA report. Do not wait for the user to ask for Markdown. A topic-only request needs a research report, not an invented finished article.
+
+Before drafting, create a private evidence ledger with: existing-page ownership and intent, leading competing pages and their gaps, authoritative source URLs supporting time-sensitive claims, proposed information gain, verified live internal URLs, and any unavailable evidence. If a live source, site taxonomy, or GSC data cannot be accessed, label it unverified; do not silently fill the gap from memory.
+
+Before final delivery, perform a second pass against the final file itself. A stated intention, earlier draft, or plan does not count as evidence of inclusion. Report each gate as PASS, NEEDS USER DATA, or BLOCKED, with a short reason. Only say “ready to publish” when every material gate passes. Otherwise deliver a clearly labelled draft or research brief with exact outstanding actions.
 
 ## Core workflow
 
@@ -110,6 +121,10 @@ Avoid habitual AI wording such as “delve,” “unleash,” “navigate the la
 
 Length is determined by search intent and usefulness. Do not use a fixed word-count target as a ranking rule.
 
+## Real-world evidence and cases
+
+For incident, recovery, security-control, or implementation articles, search for a relevant credible documented real-world case when it would improve the answer. Check date, attribution, and what the evidence actually proves. Identify a forum/Q&A account as a user report, not an independently verified incident. If no credible case is found, state that in the QA report and use a clearly labelled hypothetical scenario only when useful. Never invent a real case or imply that a scenario is real. A documented case is not mandatory for every topic.
+
 ## Article implementation pattern
 
 For an important control or action, include as many of these as materially useful:
@@ -138,7 +153,7 @@ Use the exact primary keyword naturally where appropriate:
 Do not use keyword-density targets or artificial repetition.
 
 ### Meta description
-Target 150–160 characters maximum unless Abdul explicitly requests another limit. Write for CTR and intent. Include the primary keyword naturally when it fits.
+Target 150–160 characters maximum unless User explicitly requests another limit. Write for CTR and intent. Include the primary keyword naturally when it fits.
 
 ### URL
 Keep the slug short, descriptive, and stable. Do not recommend changing an established URL without a strong reason and redirect plan.
@@ -209,9 +224,20 @@ Use real query data to refine titles/meta, answer missing questions, strengthen 
 
 Do not interpret implementation completion as proof of ranking improvement.
 
+## Non-negotiable delivery gates
+
+For a final article, verify the saved Markdown file contains:
+- A separate publishing-settings block: exact focus keyword, SEO title, H1, meta description with counted characters, proposed slug and canonical URL, verified existing primary category and any justified secondary category, search intent, and secondary terms when useful.
+- A clean publishable article body with one H1, keyword in title/H1, introduction, relevant heading, body, and where natural conclusion or FAQ; readable prose and no editorial placeholders.
+- Contextual links to verified live internal pages and current authoritative external sources, with no UTM tracking parameters in proposed canonical/internal URLs; check target relevance, not only link syntax.
+- Practical implementation detail where useful: what to do, plan dependency, verification result, failure path, and evidence to save. Provide a usable worksheet/test record when it materially reduces reader work.
+- A separately labelled QA report covering page ownership, competitor gaps and the new contribution, factual/source verification, real-world case search outcome when relevant, internal/external link checks, taxonomy verification, and limitations. Keep research notes and publishing instructions out of the article body.
+
+If the user asks for only a revision of existing copy, preserve unrelated wording and structure, and explain any unavoidable change.
+
 ## Ready-to-upload deliverable
 
-When Abdul requests a final article:
+When User requests a final article:
 - clearly separate SEO settings from article body;
 - include SEO title;
 - meta description;
@@ -222,9 +248,13 @@ When Abdul requests a final article:
 - contextual internal links;
 - authoritative external links;
 - sources/references when useful;
-- deliver as `.md` when requested.
+- deliver as a real `.md` file by default for final articles; include a direct link to that file.
 
 Do not place editorial notes inside the article body unless clearly marked for removal before publication.
+
+## Stop conditions
+
+Never mark an article publish-ready if its Markdown file is missing, required on-page fields are absent, links are placeholders/unverified, a material current claim lacks a supporting source, the article duplicates an existing page’s intent without a defensible plan, or its supposed information gain is only a longer rewrite of competitors. Fix the issue if possible; otherwise disclose the precise blocker in the QA report. Do not turn a lack of paid keyword data into a fabricated difficulty score or ranking promise.
 
 ## Final QA checklist
 
@@ -259,7 +289,7 @@ Before saying “ready to publish,” verify:
 
 ## Trigger examples
 
-Use this skill when Abdul says things such as:
+Use this skill when user says things such as:
 - “Use Maddy On Page SEO Skill.”
 - “Maddy SEO se topic research kro.”
 - “Is article ko Maddy SEO rules ke hisab se audit kro.”
@@ -268,4 +298,4 @@ Use this skill when Abdul says things such as:
 - “Is topic ko rankable angle do.”
 - “GSC data dekh kar article update kro.”
 
-If Abdul explicitly overrides a rule for one task, follow that task-specific instruction while preserving the remaining skill rules.
+If User explicitly overrides a rule for one task, follow that task-specific instruction while preserving the remaining skill rules.
