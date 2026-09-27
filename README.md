@@ -1,2 +1,2 @@
 # Maddy-On-page-SEO
-An SEO content workflow for researching, fact-checking, and writing useful, publish-ready articles with verified sources and complete on-page details.
+Maddy On Page SEO Skill guides an article from search-intent and competitor research through source verification, information-gain checks, writing, and final SEO review. It produces a ready-to-publish Markdown article with SEO title, meta description, slug, categories, contextual internal and external links, and practical guidance for readers. It checks for overlap with existing pages and does not promise rankings.
